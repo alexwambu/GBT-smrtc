@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: gbt-deployer
+    runtime: node
+    buildCommand: |
+      npm install
+      npm run build
+    startCommand: npm run start
+    envVars:
+      - key: RPC_URL
+        value: https://gbtnetwork-render.onrender.com
+      - key: PRIVATE_KEY
+        value: 0xa43f3a9f4063c9094f8de8325c45f647aa7d10d870f2
+      - key: PORT
+        value: 10000
